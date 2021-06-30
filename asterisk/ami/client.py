@@ -173,7 +173,7 @@ class AMIClient(object):
                 break
         while not self.finished.is_set():
             is_list = self.asterisk_start_list_regex.match(data)
-            list_ends = self.asterisk_end_list_regex.match(data)
+            list_ends = self.asterisk_end_list_regex.search(data)
             # If data has complete EventList even, get and yield it
             if is_list and list_ends:
                 ending = list_ends.group()
