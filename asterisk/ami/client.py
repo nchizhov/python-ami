@@ -60,7 +60,7 @@ class AMIClient(object):
     )
     # EventList end pattern
     asterisk_end_list_regex = re.compile(
-        b'EventList: Complete\r\n.+\r\n.+\r\n\r\n',
+        b'EventList: Complete\r\n',
         re.IGNORECASE | re.MULTILINE
     )
 
